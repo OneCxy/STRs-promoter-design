@@ -7,22 +7,29 @@ This “structure-first, then generation” strategy makes the process more cont
 
 
 # Installation<br>
-* Option 1: pip<br>
-pip install -r requirements.txt
-
-* Option 2: Conda<br>
-conda env create -f environment.yml<br>
-conda activate prostr<br>
+You need to configure the following environment before running the ProSTR model. It should be noted that this project is carried out in the Windows system, if you are using Linux system, We hope you can install the corresponding environment version yourself.<br>
+PyCharm 2021<br>
+Python = 3.10<br>
+torch>=2.0<br>
+CUDA = 12.x<br>
+numpy>=1.24<br>
+pandas>=2.0<br>
+scipy>=1.10<br>
+scikit-learn>=1.3<br>
+matplotlib>=3.7<br>
+tqdm>=4.66<br>
+biopython>=1.81<br>
+seaborn>=0.13<br>
 
 
 # Prepare data
-Reference:Johns N I, Gomes A L, Yim S S, et al.Metagenomic mining of regulatory elements enables programmable species-selective gene expression.Nature methods,2018, 15 (5): 323-329.
+Reference:Johns N I, Gomes A L, Yim S S, et al.Metagenomic mining of regulatory elements enables programmable species-selective gene expression.Nature methods,2018, 15 (5): 323-329.<br>
 
 * ecoli_generation.csv      The data used by the generator（ \Generator\step1_cGAN.py ） <br>
 * ecoli_prediction.csv      The data used by the predictor（ \prediction\GRU.py） <br>
 
 # Design Promoter Sequence
-We take design promoters in E.coli as an example,to illustrate how to train the ProSTR model and design the promoter sequences.
+We take design promoters in E.coli as an example,to illustrate how to train the ProSTR model and design the promoter sequences.<br>
 
 ## 1. Training the predictor (can be done in advance)
 
