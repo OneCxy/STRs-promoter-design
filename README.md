@@ -59,8 +59,7 @@ cachetest/inducible_ecoli_*.csv <br>
 results/model/predictor.pth (trained model)  <br>
 Output: <br>
 cachetest1/fillseq_*.csv <br>
-(each row contains: optimized sequence, corresponding template strand, predicted activity, <br>
-original template, original sequence, update flag) <br>
+(each row contains: optimized sequence, corresponding template strand, predicted activity,original template, original sequence, update flag) <br>
 
 
 * run \Generator\loss.py   <br>
@@ -70,11 +69,11 @@ Compute similarity loss between generated and natural sequences for quality-awar
 cachetest1/fillseq_*.csv  (STR-modified sequences)  <br>
 data/ecoli_generation.csv  (natural sequences used as reference)  <br>
 Output:  <br>
-cachetest1/fillseq_*_with_loss.csv  (each sequence with an added loss value)  <br>
-cachetest1/fillseq_*_with_loss_sort.csv  (sorted by loss)  <br>
-cachetest1/fillseq_*_with_loss_sort1.csv  (sorted sequences only)  <br>
-cachetest1/fillseq_*_with_loss_sort.fasta  (converted to FASTA format)  <br>
-cachetest1/fillseq_*_with_loss_tiqu.csv  (final selected sequences used for the next stage)  <br>
+cachetest1/fillseq_*with_loss.csv  (each sequence with an added loss value)  <br>
+cachetest1/fillseq_*with_loss_sort.csv  (sorted by loss)  <br>
+cachetest1/fillseq_*with_loss_sort1.csv  (sorted sequences only)  <br>
+cachetest1/fillseq_*with_loss_sort.fasta  (converted to FASTA format)  <br>
+cachetest1/fillseq_*with_loss_tiqu.csv  (final selected sequences used for the next stage)  <br>
 
 * run \Generator\step2_cGAN.py <br>
 
